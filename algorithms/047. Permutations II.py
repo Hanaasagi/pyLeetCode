@@ -27,5 +27,5 @@ class Solution(object):
         for i, n in enumerate(nums):
             if n not in history:
                 history.append(n)
-                res += [[n] + p for p in self.permuteUnique(nums[:i] + nums[i + 1:]) or [[]]]
+                res += [[n] + p for p in self.permuteUnique(nums[:i] + nums[i+1:]) or [[]]]
         return res
