@@ -20,7 +20,7 @@ class Solution(object):
         if root is None:
             return 0
         elif root.left is None:
-            return 1 + self.minDepth(root.right)
+            return self.minDepth(root.right) + 1
         elif root.right is None:
-            return 1 + self.minDepth(root.left)
-        return 1 + min(self.minDepth(root.left), self.minDepth(root.right))
+            return self.minDepth(root.left) + 1
+        return min(self.minDepth(root.left), self.minDepth(root.right)) + 1
